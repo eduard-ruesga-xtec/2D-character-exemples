@@ -48,11 +48,11 @@ public class GameData :ScriptableObject
 
     public void UpdateCurrentScore(int score)
     {
-        score += currentCoins;
+        currentCoins += score;
     }
     public void UpdateCurrentCoints(int score)
     {
-        score += currentScore;
+        currentScore += score;
     }
 
 

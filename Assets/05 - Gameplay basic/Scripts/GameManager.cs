@@ -14,7 +14,7 @@ public enum GameStates
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager _ins;
+    public static GameManager _ins;
     [SerializeField] private GameStates currentGameState;
 
     public GameData gameData;
@@ -94,7 +94,15 @@ public class GameManager : MonoBehaviour
     }
 
 
-    
+    internal void IncreaseCoin()
+    {
+        gameData.UpdateCurrentCoints(1);
+    }
+    internal void IncreaseCoin(int coins)
+    {
+        gameData.UpdateCurrentCoints(coins);
+    }
+
 
 
 }
